@@ -11,10 +11,16 @@ char *string_in (char s1[], char s2[])
         return NULL;
     else
         for (i = 0; i < len1; i++, ptr1++)
+        {
             found = strncmp (ptr1, ptr2, len2);
+            if (found == 0)
+            {
+                break;
+                return ptr1;
+            }
+        }
 
         //printf ("%d\n", found);
-
     if (found == 0)
         return ptr1;
     else
@@ -23,7 +29,7 @@ char *string_in (char s1[], char s2[])
 int main (void)
 {
     char ar1[] = "hello";
-    char ar2[] = "el";
+    char ar2[] = "hell";
 
     char *find;
     find = string_in (ar1, ar2);

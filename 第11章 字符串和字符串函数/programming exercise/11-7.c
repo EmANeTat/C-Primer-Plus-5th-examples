@@ -29,7 +29,7 @@ char *string_in (char s1[], char s2[])
 int main (void)
 {
     char ar1[] = "hello";
-    char ar2[] = "hell";
+    char ar2[] = "hello";
 
     char *find;
     find = string_in (ar1, ar2);
